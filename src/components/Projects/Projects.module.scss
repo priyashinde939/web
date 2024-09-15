@@ -1,0 +1,135 @@
+@import "../../styles/main.scss";
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .card__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 130rem;
+        margin: 0 auto;
+
+        @include respond(tab-land) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .project {
+            .card__svg {
+                fill: white;
+                svg {
+                    width: 10rem;
+                    height: 10rem;
+                    aspect-ratio: 1;
+                }
+            }
+
+            &__data {
+                display: flex;
+                justify-content: space-between;
+                font-style: italic;
+                font-size: 2rem;
+                font-weight: bold;
+
+                &--left {
+                    text-transform: uppercase;
+                }
+
+                // background-color: floralwhite;
+            }
+
+            &__logo {
+                // background-color: pink;
+
+                .card__svg {
+                    fill: white;
+                }
+            }
+
+            &__description {
+                padding: 0.5rem;
+                text-align: justify;
+                font-size: 1.5rem;
+                // font-size:$default ;
+                // background-color: greenyellow;
+            }
+
+            &__stack {
+                // background-color: blue;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+
+                .card__svg {
+                    fill: white;
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+
+            &__links {
+                // background-color: gray;
+                display: flex;
+                justify-content: space-around;
+                // flex-direction: column;
+                align-items: center;
+
+                .link__btn,
+                .github__btn {
+                    color: $primary-white;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    border: 2px solid $primary-white;
+                    border-radius: 2rem;
+                    padding: 1rem 3rem;
+                    transition: 0.4s all;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    &:hover {
+                        background-color: $primary-white;
+                        color: $primary-black;
+                        transform: translateY(-2px);
+                        box-shadow: 0.1rem 2rem 3rem $primary-black;
+                    }
+
+                    @media screen and (max-width: 660px) {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .github__btn {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &:hover .card__svg {
+                        fill: $primary-black;
+                    }
+                }
+
+                .card__svg {
+                    margin-left: 1.2rem;
+                    fill: white;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    transition: 0.4s;
+
+                    @media screen and (max-width: 660px) {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+
+                    &:hover {
+                        fill: $primary-black;
+                    }
+                }
+            }
+        }
+    }
+}

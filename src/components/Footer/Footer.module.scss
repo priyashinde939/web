@@ -1,0 +1,58 @@
+@import "../../styles/main.scss";
+
+.footer {
+    // border-top: 2px solid $primary-white;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    @include respond(tab-land) {
+        margin-top: 15rem;
+    }
+
+    // https://hype4.academy/tools/glassmorphism-generator
+    background: rgba(255, 255, 255, 0);
+
+    box-shadow: 0 4px 8px 0 rgba(206, 206, 206, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    @include respond(tab-port) {
+        border-top: 2px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .footer__svg {
+        fill: $primary-white;
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 0.5rem;
+        transition: 0.2s all;
+        &:hover {
+            transform: translateY(-2px);
+        }
+        @include respond(tab-port) {
+            height: 4rem;
+            width: 4rem;
+        }
+        @include respond(screen) {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+    .reserved {
+        font-size: 1.3rem;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(screen) {
+            font-size: 1.8rem;
+        }
+
+        &--bold {
+            font-weight: bold;
+            text-shadow: 0 0 1px #fff, 0 0 1px #fff,
+                0 0 2px rgba(249, 249, 249, 0.9);
+        }
+    }
+}

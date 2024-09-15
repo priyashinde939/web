@@ -1,0 +1,86 @@
+@import "./styles/main.scss";
+
+.section {
+    position: relative;
+
+    &--hero {
+        @media screen and (max-width: 500px) {
+            span {
+                margin-right: 0.1px;
+            }
+        }
+    }
+
+    &--services {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+
+    &--projects {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+.section--contact {
+    display: flex;
+    justify-content: center;
+    // @include respond(big-desktop) {
+    //     min-height: 100vh;
+    // }
+    @media only screen and (min-width: 1200px) {
+        min-height: 70vh;
+    }
+}
+.contact {
+    max-width: 120rem;
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 130rem;
+
+        @include respond(tab-port) {
+            flex-direction: row;
+        }
+
+        &__txt {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            width: 90%;
+            @include respond(tab-port) {
+                flex: 0 0 50%;
+            }
+
+            // align-items: center;
+        }
+    }
+}
+
+a.active {
+    transform: scale(1);
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 7px rgba($primary-white, 0.9);
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        right: 0px;
+        bottom: -3px;
+        left: 0px;
+
+        background-color: white;
+        background: white;
+        box-shadow: 0 0 1px #fff, 0 0 3px #fff,
+            0 0 7px rgba($primary-white, 0.9);
+        // transition: all 0.1s;
+    }
+}

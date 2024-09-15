@@ -1,0 +1,21 @@
+.container {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // h1 {
+    //     // mix-blend-mode: difference;
+
+    //     mix-blend-mode: exclusion;
+    // }
+    // .intro {
+    //     margin: 0 1rem;
+    // }
+    @media screen and (max-width: 900px) {
+        padding: 0rem 2.5rem;
+    }
+}

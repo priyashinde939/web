@@ -1,0 +1,40 @@
+@import "../../styles/main.scss";
+
+.toggle__btn {
+    position: fixed;
+    z-index: 40;
+    top: 2rem;
+    right: 1rem;
+
+    .btn {
+        display: inline-block;
+        background-color: transparent;
+        padding: 0 1rem;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-right: 2px solid $primary-white;
+        }
+
+        &,
+        &:active,
+        &:visited {
+            border: none;
+            border-radius: 0px;
+            outline: none;
+        }
+
+        // Change into class??
+        span {
+            display: inline-block;
+            font-weight: 200;
+            color: $primary-gray-dark;
+            transition: all 0.2s;
+            // cursor: pointer;
+        }
+        .active {
+            font-weight: bold;
+            color: $primary-white;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "../../styles/main.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    // @include respond(tab-port) {
+    //     flex-direction: row;
+    // }
+    @include respond(tab-land) {
+        flex-direction: row;
+        margin: 0 auto;
+        max-width: 130rem;
+        flex: 0 0 20%;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 90vw;
+
+    @include respond(tab-port) {
+        max-width: 50vw;
+    }
+
+    @include respond(tab-land) {
+        max-width: 20vw;
+    }
+
+    // height: 30vw;
+    color: $primary-white;
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .card__heading {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.4rem;
+            display: block;
+        }
+
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+        @include respond(screen) {
+            flex-direction: row;
+        }
+    }
+
+    &__svg {
+        width: 25%;
+        aspect-ratio: 1;
+
+        fill: $primary-white;
+    }
+
+    &__description {
+        margin: 3rem 0;
+        padding: 1rem;
+        text-align: justify;
+        border-left: 2px solid rgba(255, 255, 255, 0.5);
+        font-size: 1.4rem;
+    }
+}
